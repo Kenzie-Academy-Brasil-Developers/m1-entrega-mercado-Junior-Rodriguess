@@ -88,192 +88,143 @@ const products = [
     imageDescription: "",
   },
 ];
-
-const tagBody = document.querySelector('body')
-let tagNav    = document.createElement('nav')
-let tagImg    = document.createElement('img')
-tagImg.src    = "./img/brand/logo.svg"
-
-
-
-let tagMainPai         = document.createElement('main')
-tagMainPai.classList   = ("container")
-
-let tagSection         = document.createElement('section')
-tagSection.classList   = ("products-section")
-
-let tagH1              = document.createElement('h1')
-tagH1.innerText        = `Frutas`
-
-let tagMainFilha       = document.createElement('main')
-tagMainFilha.classList = ("products-content fruits")
-
-let tagUl             = document.createElement('ul')
-
-let tagLi              = document.createElement('li')
-tagLi.classList        = ("products-content fruits")
-// ADICIONAR  / ALT / TITLE
-// img
-//   src="./img/brand/logo.svg"
-//   alt="Imagem da logotipo do Virtual Market de cor preta"
-//   title="Imagem da logotipo do Virtual Market de cor preta"
-  let tagImgUva          = document.createElement('img')
-  tagImgUva.src          = "./img/products/no-img.svg"
-
-    
-
-
-tagNav.append(tagImg)
-tagBody.append(tagNav)
-tagBody.append(tagMainPai)
-tagMainPai.append(tagSection, tagMainFilha)
+let tagBody    = document.querySelector('body')
+let tagSection = document.createElement('section')
+let tagH1      = document.createElement('h1')
+let tagMain    = document.createElement('main')
+let tagUl      = document.createElement('ul')
+tagSection.classList = ("products-section")
+tagH1.innerText      = `Frutas`
+tagMain.classList    = ("products-content")
+tagUl.classList      = ("listaDeProdutos")
+tagBody.append(tagSection, tagMain)
 tagSection.append(tagH1)
-tagMainFilha.append(tagUl)
-tagUl.append(tagLi)
-tagLi.append(tagImgUva)
-
-
-let tagMainUva         = document.createElement('main')
-tagMainUva.classList   = ("product-main")
-
-let tagH1Uva           = document.createElement('h1')
-tagH1Uva.classList     = ("product-title")
-
-let tagH5Uva           = document.createElement('h5')
-tagH5Uva.classList     = ("product-category")
-
-let strongUva          = document.createElement('strong')
-strongUva.classList    = ("product-price")
-
-tagLi.append        (tagMainUva)
-tagMainUva.append   (tagH1Uva, tagH5Uva, strongUva)
-tagH1Uva.innerText  = `Uva Crimson`
-tagH5Uva.innerText  = `Frutas`
-strongUva.innerText = `R$ 8.99`
-
-let tagLiProductBanana = document.createElement('li')
-
-let tagImgBanana       = document.createElement('img')
-
-let tagMainBanana      = document.createElement('main')
-
-let tagH1Banana        = document.createElement('h1')
-
-let tagH5Banana        = document.createElement('h5')
-
-let strongBanana       = document.createElement('strong')
-
-tagUl.append                 (tagLiProductBanana)
-tagLiProductBanana.append    (tagImgBanana, tagMainBanana)
-tagLiProductBanana.classList = ("product")
-tagImgBanana.src             = "./img/products/product_2.svg"
-tagMainBanana.append         (tagH1Banana, tagH5Banana, strongBanana)
-tagH1Banana.innerText        = "Banana"
-tagH5Banana.innerText        = "Frutas"
-strongBanana.innerText       = "R$ 5.69"
-
-let tagLiProduct = document.createElement('li')
-
-let tagImgMamao  = document.createElement('img')
-
-let tagMainMamao = document.createElement('main')
-
-let tagH1Mamao   = document.createElement('h1')
-
-let tagH5Mamao   = document.createElement('h5')
-
-let strongMamao = document.createElement('strong')
-tagUl.append                (tagLiProduct)
-tagLiProduct.append         (tagImgMamao, tagMainMamao)
-tagLiProduct.classList      = ("product-main")
-tagImgMamao.src             = "./img/products/product_3.svg"
-tagMainMamao.append         (tagH1Mamao, tagH5Mamao, strongMamao)
-tagH1Mamao.innerText        = "Mamão"
-tagH5Mamao.innerText        = "Frutas"
-strongMamao.innerText       = "R$ 4.99"
-
-
-
-let tagLiProductMaca = document.createElement('li')
-
-let tagImgMaca = document.createElement('img')
-
-let tagMainMaca = document.createElement('main')
-
-let tagH1Maca  = document.createElement('h1')
-
-let tagH5Maca  = document.createElement('h5')
-
-let strongMaca = document.createElement('strong')
-
-tagUl.append                    (tagLiProductMaca)
-tagLiProductMaca.append         (tagImgMaca, tagMainMaca)
-tagLiProductMaca.classList      = "Product"
-tagImgMaca.src                  = "./img/products/product_4.svg"
-tagMainMaca.classList           = ("product-main")
-tagMainMaca.append              (tagH1Maca, tagH5Maca, strongMaca)
-tagH1Maca.innerText             = "Maça"
-tagH5Maca.innerText             = "Frutas"
-strongMaca.innerText            = "R$ R$ 9.2"
-
-tagMainFilha.append(tagSection, tagUl)
-
-/* <main class="container">
-      <section class="products-section">
-        <h1>Frutas</h1>
-        <main class="products-content fruits">
-          <ul>
-            <li class="product">
-
-              <img
-                src="./img/products/no-img.svg"
-                alt=""
-                title=""
-                class="product-img"
-              />
-
-              <main class="product-main">
-                <h1 class="product-title">Uva Crimson</h1>
-                <h5 class="product-category">Frutas</h5>
-                <strong class="product-price">R$ 8.99</strong>
-              </main> */
-         // </li
-  
-        //    <li class="product">
-        //    <img
-        //      src="./img/products/product_2.svg"
-        //      alt=""
-        //      title=""
-        //      class="product-img"
-        //    />
-
-
-        //    <main class="product-main">
-        //      <h1 class="product-title">Banana</h1>
-        //      <h5 class="product-category">Frutas</h5>
-        //      <strong class="product-price">R$ 5.69</strong>
-        //    </main>
-        //  </li>
-
-
-
-
-
-
-
-
-
-      //   <li class="product">
-      //   <img
-      //     src="./img/products/product_4.svg"
-      //     alt=""
-      //     title=""
-      //     class="product-img"
-      //   />
-      //   <main class="product-main">
-      //     <h1 class="product-title">Maçã</h1>
-      //     <h5 class="product-category">Frutas</h5>
-      //     <strong class="product-price">R$ 9.2</strong>
-      //   </main>
-      // </li>
-      //</ul>
+tagMain.append(tagUl)
+function categorias(products, categoria) {
+    let array = []
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].category == categoria) {
+        array.push(products[i])
+      }
+    }
+    return array
+}
+let resultadoFrutas  = categorias(products, "Frutas")
+function renderizarfrutas(){
+  for (let i = 0 ; i < resultadoFrutas.length; i++) {
+    let tagLiProdutos           = document.createElement('li')
+    let tagImgProdutos          = document.createElement('img')
+    console.log(products[i].image === undefined)
+    if (products[i].image === undefined) {
+      tagImgProdutos.src = "/img/products/no-img.svg"
+    }
+    else {
+      tagImgProdutos.src       = resultadoFrutas[i].image
+    }
+    let tagH1Produtos           = document.createElement('h1')
+    let tagH5Produtos           = document.createElement('h5')
+    let strongProdutos          = document.createElement('strong')
+    tagLiProdutos.classList.add("product")
+    tagH1Produtos.classList.add("product-title")
+    tagH5Produtos.classList.add("product-category")
+    strongProdutos.classList.add("product-price")
+    tagH1Produtos.innerText  = resultadoFrutas[i].title
+    tagH5Produtos.innerText  = resultadoFrutas[i].category
+    strongProdutos.innerText = resultadoFrutas[i].price
+    tagLiProdutos.append(tagImgProdutos, tagH1Produtos, tagH5Produtos, strongProdutos)
+    tagUl.append(tagLiProdutos)
+  }
+}
+renderizarfrutas()
+let tagSectionBebidas       = document.createElement('section')
+let tagH1Bebidas            = document.createElement('h1')
+let tagMainBebidas          = document.createElement('main')
+let tagUlBebidas            = document.createElement('ul')
+tagSectionBebidas.classList = ("products-section")
+tagH1Bebidas.innerText      = `Bebidas`
+tagMainBebidas.classList    = ("products-content drinks")
+tagUlBebidas.classList      = ("listaDeProdutos")
+tagBody.append(tagSectionBebidas, tagMainBebidas)
+tagSectionBebidas.append(tagH1Bebidas)
+tagMainBebidas.append(tagUlBebidas)
+function categoriasbebidas(products, categorias){
+  let array = []
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].category == categorias) {
+      array.push(products[i])
+    }
+  }
+  return array
+}
+let resultadoBebidas = categoriasbebidas(products, "Bebidas")
+function renderizarbebidas(){
+  for (let i = 0 ; i < resultadoBebidas.length; i++) {
+    let tagLiProdutos           = document.createElement('li')
+    let tagImgBebidas           = document.createElement('img')
+    if (resultadoBebidas[i].image === undefined) {
+      tagImgBebidas.src = "./img/products/no-img.svg"
+    }
+    else {
+      tagImgBebidas.src         = resultadoBebidas[i].image
+    }
+    let tagH1Produtos           = document.createElement('h1')
+    let tagH5Produtos           = document.createElement('h5')
+    let strongProdutos          = document.createElement('strong')
+    tagLiProdutos.classList.add("product")
+    tagH1Produtos.classList.add("product-title")
+    tagH5Produtos.classList.add("product-category")
+    strongProdutos.classList.add("product-price")
+    tagH1Produtos.innerText  = resultadoBebidas[i].title
+    tagH5Produtos.innerText  = resultadoBebidas[i].category
+    strongProdutos.innerText = resultadoBebidas[i].price
+    tagLiProdutos.append(tagImgBebidas, tagH1Produtos, tagH5Produtos, strongProdutos)
+    tagUlBebidas.append(tagLiProdutos)
+  }
+}
+renderizarbebidas()
+let tagSectionHigiene       = document.createElement('section')
+let tagH1Higiene            = document.createElement('h1')
+let tagMainHigiene          = document.createElement('main')
+let tagUlHigiene            = document.createElement('ul')
+tagSectionHigiene.classList = ("products-section")
+tagH1Higiene.innerText      = `Higiene`
+tagMainHigiene.classList    = ("products-content hygiene")
+tagUlHigiene.classList      = ("listaDeProdutos")
+tagBody.append(tagSectionHigiene, tagMainHigiene)
+tagSectionHigiene.append(tagH1Higiene)
+tagMainHigiene.append(tagUlHigiene)
+function categoriahigiene(products, categoria){
+  let array = []
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].category == categoria) {
+        array.push(products[i])
+      }
+    }
+    return array
+}
+let resultadoHigiene = categoriahigiene(products, "Higiene")
+function renderizarhigiene() {
+  for (let i = 0 ; i < resultadoHigiene.length; i++) {
+    let tagLiProdutos           = document.createElement('li')
+    let tagImgProdutos          = document.createElement('img')
+    if(resultadoHigiene[i].image === undefined){
+      tagImgProdutos.src = "/img/products/no-img.svg"
+    }
+    else {
+      tagImgProdutos.src       = resultadoHigiene[i].image
+    }
+    let tagH1Produtos           = document.createElement('h1')
+    let tagH5Produtos           = document.createElement('h5')
+    let strongProdutos          = document.createElement('strong')
+    tagLiProdutos.classList.add("product")
+    tagH1Produtos.classList.add("product-title")
+    tagH5Produtos.classList.add("product-category")
+    strongProdutos.classList.add("product-price")
+    tagH1Produtos.innerText  = resultadoHigiene[i].title
+    tagH5Produtos.innerText  = resultadoHigiene[i].category
+    strongProdutos.innerText = resultadoHigiene[i].price
+    tagLiProdutos.append(tagImgProdutos, tagH1Produtos, tagH5Produtos, strongProdutos)
+    tagUlHigiene.append(tagLiProdutos)
+  }
+}
+renderizarhigiene()
